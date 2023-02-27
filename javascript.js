@@ -28,8 +28,11 @@ const btn = document.querySelector('.btn-create');
 btn.addEventListener('click', promptAndRefresh);
 
 function promptAndRefresh(){
+    const currentBoard = document.querySelector('.container');
+    let previousSize = currentBoard.children.length;
+
     // prompt user for board size
-    let boardSize = parseInt( prompt("What is the new board size?", 16) );
+    let boardSize = parseInt( prompt("What is the new board size?", previousSize) );
     console.log(boardSize);
     drawBoard(boardSize);
 
