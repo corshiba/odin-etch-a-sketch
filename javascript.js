@@ -24,3 +24,13 @@ function drawBoard( boardSize = 16 ){
 
 drawBoard();
 
+const btn = document.querySelector('.btn-create');
+btn.addEventListener('click', promptAndRefresh);
+
+function promptAndRefresh(){
+    // prompt user for board size
+    let boardSize = parseInt( prompt("What is the new board size?", 16) );
+    console.log(boardSize);
+    drawBoard(boardSize);
+
+}
