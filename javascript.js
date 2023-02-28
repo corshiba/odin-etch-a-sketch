@@ -51,5 +51,6 @@ function attachEventListener(){
 }
 
 function hoverEffect(event) {
-   this.classList.add('hoverColor');
+    this.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+   //this.classList.add('hoverColor');
 }
