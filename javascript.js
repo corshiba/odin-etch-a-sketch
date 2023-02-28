@@ -20,6 +20,8 @@ function drawBoard( boardSize = 16 ){
 
         container.appendChild(newRowDiv);
     }
+
+    attachEventListener();
 }
 
 drawBoard();
@@ -35,15 +37,18 @@ function promptAndRefresh(){
     let boardSize = parseInt( prompt("What is the new board size?", previousSize) );
     console.log(boardSize);
     drawBoard(boardSize);
+
+    attachEventListener();
 }
 
-// get all square divs
-const squares = document.querySelectorAll('.square');
-//console.log(squares);
+function attachEventListener(){
+    // get all square divs
+    const squares = document.querySelectorAll('.square');
 
-squares.forEach( (square) => {
-    square.addEventListener('mouseover', hoverEffect);
-});
+    squares.forEach( (square) => {
+        square.addEventListener('mouseover', hoverEffect);
+    });
+}
 
 function hoverEffect(event) {
    //console.log( this );
