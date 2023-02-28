@@ -35,5 +35,4 @@ function promptAndRefresh(){
     let boardSize = parseInt( prompt("What is the new board size?", previousSize) );
     console.log(boardSize);
     drawBoard(boardSize);
-
 }
