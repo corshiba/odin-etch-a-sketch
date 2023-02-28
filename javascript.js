@@ -51,6 +51,5 @@ function attachEventListener(){
 }
 
 function hoverEffect(event) {
-   //console.log( this );
-   this.classList.toggle('hoverColor');
+   this.classList.add('hoverColor');
 }
