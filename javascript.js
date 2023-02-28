@@ -36,3 +36,15 @@ function promptAndRefresh(){
     console.log(boardSize);
     drawBoard(boardSize);
 }
+
+// get all square divs
+const squares = document.querySelectorAll('.square');
+//console.log(squares);
+
+squares.forEach( (square) => {
+    square.addEventListener('mouseover', hoverEffect);
+});
+
+function hoverEffect(event) {
+   console.log( this );
+}
