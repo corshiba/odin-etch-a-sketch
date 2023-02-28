@@ -46,5 +46,6 @@ squares.forEach( (square) => {
 });
 
 function hoverEffect(event) {
-   console.log( this );
+   //console.log( this );
+   this.classList.toggle('hoverColor');
 }
